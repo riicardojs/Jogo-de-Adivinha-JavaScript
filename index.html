@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<title>Jogo de Adivinhar</title>
+
+</head>
+<body>
+    
+    <p>Quantos dedos estou segurando?</p>
+    
+    <p><input type="text" id="boxText"> <button id="adivinharButton">Adivinhar</button></p>
+    
+    
+	<script type="text/javascript">
+        
+        document.getElementById("adivinharButton").onclick = function(){
+            
+            var numeroRandomico = Math.random();
+            
+            numeroRandomico = numeroRandomico * 11;
+            numeroRandomico = Math.floor(numeroRandomico);
+        
+            if(document.getElementById("boxText").value == numeroRandomico){
+                alert("Você acertou!");
+            }else{
+                alert("Você errou! O número era " + numeroRandomico);
+            }
+            
+        }
+             
+	</script>
+
+</body>
+</html>
